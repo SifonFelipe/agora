@@ -1,0 +1,145 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/sifon/code/agora/agora_backend/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+ALLOWED_HOSTS	agora_backend/settings.py	/^ALLOWED_HOSTS = []$/;"	v
+AUTH_PASSWORD_VALIDATORS	agora_backend/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
+AUTH_USER_MODEL	agora_backend/settings.py	/^AUTH_USER_MODEL = "accounts.User"$/;"	v
+AccountsConfig	accounts/apps.py	/^class AccountsConfig(AppConfig):$/;"	c
+Answer	content/models/questions.py	/^class Answer(models.Model):$/;"	c
+BASE_DIR	agora_backend/settings.py	/^BASE_DIR = Path(__file__).resolve().parent.parent$/;"	v
+Bookmark	interactions/models/bookmark.py	/^class Bookmark(models.Model):$/;"	c
+Comment	content/models/comments.py	/^class Comment(models.Model):$/;"	c
+Content	content/models/content.py	/^class Content(models.Model):$/;"	c
+ContentConfig	content/apps.py	/^class ContentConfig(AppConfig):$/;"	c
+DATABASES	agora_backend/settings.py	/^DATABASES = {$/;"	v
+DEBUG	agora_backend/settings.py	/^DEBUG = True$/;"	v
+DELETED	content/models/content.py	/^        DELETED = "deleted", "Deleted"$/;"	v	class:Content.State
+DISMISSED	interactions/models/report.py	/^        DISMISSED = "dismissed", "Dismissed"$/;"	v	class:Report.Status
+Discussion	content/models/discussion.py	/^class Discussion(models.Model):$/;"	c
+FAKE	interactions/models/report.py	/^        FAKE = "fake", "Fake"$/;"	v	class:Report.Reasons
+Forum	forums/models/forums.py	/^class Forum(models.Model):$/;"	c
+ForumAdmin	forums/admin.py	/^class ForumAdmin(admin.ModelAdmin):$/;"	c
+ForumsConfig	forums/apps.py	/^class ForumsConfig(AppConfig):$/;"	c
+HIDDEN	content/models/content.py	/^        HIDDEN = "hidden", "Hidden"$/;"	v	class:Content.State
+INAPPROPRIATE	interactions/models/report.py	/^        INAPPROPRIATE = "inappropriate", "Inappropriate"$/;"	v	class:Report.Reasons
+INSTALLED_APPS	agora_backend/settings.py	/^INSTALLED_APPS = [$/;"	v
+IN_REVISION	content/models/content.py	/^        IN_REVISION = "in revision", "In Revision"$/;"	v	class:Content.State
+InteractionsConfig	interactions/apps.py	/^class InteractionsConfig(AppConfig):$/;"	c
+LANGUAGE_CODE	agora_backend/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+LOCKED	content/models/content.py	/^        LOCKED = "locked", "Locked"$/;"	v	class:Content.State
+Like	interactions/models/like.py	/^class Like(models.Model):$/;"	c
+MIDDLEWARE	agora_backend/settings.py	/^MIDDLEWARE = [$/;"	v
+Meta	forums/models/forums.py	/^    class Meta:$/;"	c	class:Forum
+Meta	interactions/models/bookmark.py	/^    class Meta:$/;"	c	class:Bookmark
+Meta	interactions/models/like.py	/^    class Meta:$/;"	c	class:Like
+Migration	accounts/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	content/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	forums/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	interactions/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+PENDING	interactions/models/report.py	/^        PENDING = "pending", "Pending"$/;"	v	class:Report.Status
+PUBLISHED	content/models/content.py	/^        PUBLISHED = "published", "Published"$/;"	v	class:Content.State
+Post	content/models/post.py	/^class Post(models.Model):$/;"	c
+Question	content/models/questions.py	/^class Question(models.Model):$/;"	c
+REVIEWED	interactions/models/report.py	/^        REVIEWED = "reviewed", "Reviewed"$/;"	v	class:Report.Status
+ROOT_URLCONF	agora_backend/settings.py	/^ROOT_URLCONF = 'agora_backend.urls'$/;"	v
+Reasons	interactions/models/report.py	/^    class Reasons(models.TextChoices):$/;"	c	class:Report
+Report	interactions/models/report.py	/^class Report(models.Model):$/;"	c
+SECRET_KEY	agora_backend/settings.py	/^SECRET_KEY = 'django-insecure-ys$flbm@(0a$ttdz*4gn#ccz+phe6bdrgdom2c_aqh5ogh(sp#'$/;"	v
+SPAM	interactions/models/report.py	/^        SPAM = "spam", "Spam"$/;"	v	class:Report.Reasons
+STATIC_URL	agora_backend/settings.py	/^STATIC_URL = 'static\/'$/;"	v
+State	content/models/content.py	/^    class State(models.TextChoices):$/;"	c	class:Content
+Status	interactions/models/report.py	/^    class Status(models.TextChoices):$/;"	c	class:Report
+TEMPLATES	agora_backend/settings.py	/^TEMPLATES = [$/;"	v
+TIME_ZONE	agora_backend/settings.py	/^TIME_ZONE = 'UTC'$/;"	v
+Tag	forums/models/tags.py	/^class Tag(models.Model):$/;"	c
+TagAdmin	forums/admin.py	/^class TagAdmin(admin.ModelAdmin):$/;"	c
+USE_I18N	agora_backend/settings.py	/^USE_I18N = True$/;"	v
+USE_TZ	agora_backend/settings.py	/^USE_TZ = True$/;"	v
+User	accounts/models/user.py	/^class User(AbstractUser):$/;"	c
+WSGI_APPLICATION	agora_backend/settings.py	/^WSGI_APPLICATION = 'agora_backend.wsgi.application'$/;"	v
+__str__	content/models/content.py	/^    def __str__(self):$/;"	m	class:Content
+__str__	content/models/discussion.py	/^    def __str__(self):$/;"	m	class:Discussion
+__str__	content/models/post.py	/^    def __str__(self):$/;"	m	class:Post
+__str__	content/models/questions.py	/^    def __str__(self):$/;"	m	class:Question
+__str__	forums/models/forums.py	/^    def __str__(self):$/;"	m	class:Forum
+__str__	forums/models/tags.py	/^    def __str__(self):$/;"	m	class:Tag
+application	agora_backend/asgi.py	/^application = get_asgi_application()$/;"	v
+application	agora_backend/wsgi.py	/^application = get_wsgi_application()$/;"	v
+author	content/models/content.py	/^    author = models.ForeignKey($/;"	v	class:Content
+body	content/models/comments.py	/^    body = models.TextField()$/;"	v	class:Comment
+body	content/models/post.py	/^    body = models.TextField()$/;"	v	class:Post
+body	content/models/questions.py	/^    body = models.TextField()$/;"	v	class:Answer
+body	content/models/questions.py	/^    body = models.TextField()$/;"	v	class:Question
+constraints	interactions/models/bookmark.py	/^        constraints = [$/;"	v	class:Bookmark.Meta
+constraints	interactions/models/like.py	/^        constraints = [$/;"	v	class:Like.Meta
+content	content/models/comments.py	/^    content = models.ForeignKey($/;"	v	class:Comment
+content	content/models/discussion.py	/^    content = models.OneToOneField($/;"	v	class:Discussion
+content	content/models/post.py	/^    content = models.OneToOneField($/;"	v	class:Post
+content	content/models/questions.py	/^    content = models.OneToOneField($/;"	v	class:Answer
+content	content/models/questions.py	/^    content = models.OneToOneField($/;"	v	class:Question
+content	interactions/models/bookmark.py	/^    content = models.ForeignKey($/;"	v	class:Bookmark
+content	interactions/models/like.py	/^    content = models.ForeignKey($/;"	v	class:Like
+content	interactions/models/report.py	/^    content = models.ForeignKey($/;"	v	class:Report
+context	content/models/discussion.py	/^    context = models.TextField()$/;"	v	class:Discussion
+created_at	content/models/content.py	/^    created_at = models.DateTimeField(auto_now_add=True)$/;"	v	class:Content
+created_at	forums/models/forums.py	/^    created_at = models.DateTimeField(auto_now_add=True)$/;"	v	class:Forum
+created_at	interactions/models/bookmark.py	/^    created_at = models.DateTimeField(auto_now_add=True)$/;"	v	class:Bookmark
+created_at	interactions/models/like.py	/^    created_at = models.DateTimeField(auto_now_add=True)$/;"	v	class:Like
+created_at	interactions/models/report.py	/^    created_at = models.DateTimeField(auto_now_add=True)$/;"	v	class:Report
+deleted_at	content/models/content.py	/^    deleted_at = models.DateTimeField(null=True, blank=True)$/;"	v	class:Content
+dependencies	accounts/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	content/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	forums/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	interactions/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+description	forums/models/forums.py	/^    description = models.TextField(blank=True)$/;"	v	class:Forum
+description	interactions/models/report.py	/^    description = models.TextField(blank=True, null=True)$/;"	v	class:Report
+discussion	content/models/questions.py	/^    discussion = models.ForeignKey($/;"	v	class:Question
+forum	content/models/content.py	/^    forum = models.ForeignKey($/;"	v	class:Content
+initial	accounts/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+initial	content/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+initial	forums/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+initial	interactions/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+is_available	content/models/content.py	/^    def is_available(self):$/;"	m	class:Content
+list_display	forums/admin.py	/^    list_display = ("name", "parent", "created_at")$/;"	v	class:ForumAdmin
+list_display	forums/admin.py	/^    list_display = ("name", "slug")$/;"	v	class:TagAdmin
+main	main.py	/^def main():$/;"	f
+main	manage.py	/^def main():$/;"	f
+name	accounts/apps.py	/^    name = 'accounts'$/;"	v	class:AccountsConfig
+name	content/apps.py	/^    name = 'content'$/;"	v	class:ContentConfig
+name	forums/apps.py	/^    name = 'forums'$/;"	v	class:ForumsConfig
+name	forums/models/forums.py	/^    name = models.CharField(max_length=100)$/;"	v	class:Forum
+name	forums/models/tags.py	/^    name = models.CharField(max_length=50, unique=True)$/;"	v	class:Tag
+name	interactions/apps.py	/^    name = 'interactions'$/;"	v	class:InteractionsConfig
+operations	accounts/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	content/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	forums/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	interactions/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+ordering	forums/models/forums.py	/^        ordering = ['-created_at']$/;"	v	class:Forum.Meta
+parent	content/models/comments.py	/^    parent = models.ForeignKey($/;"	v	class:Comment
+parent	content/models/discussion.py	/^    parent = models.ForeignKey($/;"	v	class:Discussion
+parent	forums/models/forums.py	/^    parent = models.ForeignKey(  # for SubForums nested$/;"	v	class:Forum
+prepopulated_fields	forums/admin.py	/^    prepopulated_fields = {"slug": ("name",)}$/;"	v	class:ForumAdmin
+prepopulated_fields	forums/admin.py	/^    prepopulated_fields = {"slug": ("name",)}$/;"	v	class:TagAdmin
+question	content/models/questions.py	/^    question = models.ForeignKey($/;"	v	class:Answer
+reason	interactions/models/report.py	/^    reason = models.CharField($/;"	v	class:Report
+slug	forums/models/forums.py	/^    slug = models.SlugField(unique=True)$/;"	v	class:Forum
+slug	forums/models/tags.py	/^    slug = models.SlugField(unique=True)$/;"	v	class:Tag
+state	content/models/content.py	/^    state = models.CharField($/;"	v	class:Content
+status	interactions/models/report.py	/^    status = models.CharField($/;"	v	class:Report
+tags	content/models/content.py	/^    tags = models.ManyToManyField($/;"	v	class:Content
+title	content/models/discussion.py	/^    title = models.CharField(max_length=300)$/;"	v	class:Discussion
+title	content/models/post.py	/^    title = models.CharField(max_length=200)$/;"	v	class:Post
+title	content/models/questions.py	/^    title = models.CharField(max_length=300)$/;"	v	class:Question
+updated_at	content/models/content.py	/^    updated_at = models.DateTimeField(auto_now=True)$/;"	v	class:Content
+urlpatterns	agora_backend/urls.py	/^urlpatterns = [$/;"	v
+user	interactions/models/bookmark.py	/^    user = models.ForeignKey($/;"	v	class:Bookmark
+user	interactions/models/like.py	/^    user = models.ForeignKey($/;"	v	class:Like
+user	interactions/models/report.py	/^    user = models.ForeignKey($/;"	v	class:Report
