@@ -5,19 +5,13 @@ class Comment(models.Model):
     """
     Comment to a Post or Discussion
     """
-    content = models.ForeignKey(  # content which is connected to
+    content = models.OneToOneField(  # Content of the comment
         "content.Content",
         on_delete=models.CASCADE,
-        related_name="comments"
+        related_name="comment"
     )
 
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name="comments"
-    )
-
-    parent = models.ForeignKey(
+    parent = models.ForeignKey(  # Parent comment, if this is a reply to another comment
         "self",
         null=True,
         blank=True,
@@ -25,8 +19,11 @@ class Comment(models.Model):
         related_name="replies",
     )
 
-    body = models.TextField()
+    target = models.ForeignKey(
+        "content.Content",
+        on_delete=models.CASCADE,
+        related_name="comments"
+    )
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    body = models.TextField()
 

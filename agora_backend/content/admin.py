@@ -34,6 +34,5 @@ class AnswerAdmin(admin.ModelAdmin):
 
 @admin.register(cm.Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ("content", "author", "parent", "body", "created_at", "updated_at")
-    search_fields = ("body", "author__username")
-    list_filter = ("created_at", "updated_at")
+    list_display = ("content", "content__author", "parent", "body")
+    search_fields = ("body", "content__author")
