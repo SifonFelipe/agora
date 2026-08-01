@@ -15,18 +15,24 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import { useLogin } from "./useLogin";
 
 type Mode = "login" | "register";
 
-export default function LoginForm() {
+export function LoginForm() {
   const [mode, setMode] = useState<Mode>("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const { login, isLoading, error } = useLogin();
 
-  const handleSubmit = () => {
-    // Acá después conectás con tu API de Django
-    console.log({ mode, email, password, confirmPassword });
+  const handleSubmit = async () => {
+    if (mode === "login") {
+      const success = await login({ email, password });
+      if (success) {
+        navigate("/");
+      }
+    }
   };
 
   return (
@@ -129,6 +135,8 @@ export default function LoginForm() {
                 </AnimatePresence>
               </motion.div>
             </AnimatePresence>
+
+            {error && <p className="text-sm text-red-500">{error}</p>}
           </CardContent>
         </Tabs>
 
@@ -141,9 +149,14 @@ export default function LoginForm() {
           >
             <Button
               onClick={handleSubmit}
+              disabled={isLoading}
               className="w-full bg-black text-white hover:bg-neutral-800 cursor-pointer"
             >
-              {mode === "login" ? "Ingresar" : "Registrarme"}
+              {isLoading
+                ? "Ingresando"
+                : mode === "login"
+                  ? "Ingresar"
+                  : "Registrarme"}
             </Button>
           </motion.div>
 
