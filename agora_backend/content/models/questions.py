@@ -1,13 +1,22 @@
 from django.db import models
+from django.conf import settings
 
-class Question(models.Model):
+from content.models import Content
+
+class Question(Content):
     """
     Questions for a discussion, answering that same discussion
     """
-    content = models.OneToOneField(
-        "content.Content",
+    forum = models.ForeignKey(
+        "forums.Forum",
         on_delete=models.CASCADE,
-        related_name="question"
+        related_name="questions",
+    )
+
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="questions"
     )
 
     discussion = models.ForeignKey(
@@ -19,17 +28,26 @@ class Question(models.Model):
     title = models.CharField(max_length=300)
     body = models.TextField()
 
+    tags = models.ManyToManyField(
+        "forums.Tag",
+        blank=True,
+        related_name="questions"
+    )
+
     def __str__(self):
         return self.title
 
 
 class Answer(models.Model):
     """
+    Answers to a question
+
+    #WARNING: check this, may be different for optimization
     """
-    content = models.OneToOneField(
-        "content.Content",
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name="answer"
+        related_name="answers"
     )
 
     question = models.ForeignKey(
@@ -39,3 +57,9 @@ class Answer(models.Model):
     )
 
     body = models.TextField()
+
+    tags = models.ManyToManyField(
+        "forums.Tag",
+        blank=True,
+        related_name="answers"
+    )
