@@ -12,18 +12,6 @@ class Content(models.Model):
         LOCKED = "locked", "Locked"
         DELETED = "deleted", "Deleted"
 
-    forum = models.ForeignKey(
-        "forums.Forum",
-        on_delete=models.CASCADE,
-        related_name="contents",
-    )
-
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name="contents"
-    )
-
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -35,11 +23,8 @@ class Content(models.Model):
         default=State.PUBLISHED
     )
 
-    tags = models.ManyToManyField(
-        "forums.Tag",
-        blank=True,
-        related_name="contents"
-    )
+    class Meta:
+        abstract = True
 
     def is_available(self):
         return self.State.PUBLISHED == self.state

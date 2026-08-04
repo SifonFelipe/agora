@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 
 class Report(models.Model):
     class Status(models.TextChoices):
@@ -18,11 +20,10 @@ class Report(models.Model):
         related_name="reports"
     )
 
-    content = models.ForeignKey(
-        "content.Content",
-        on_delete=models.CASCADE,
-        related_name="reports"
-    )
+    # Content which is referred to:
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content = GenericForeignKey("content_type", "object_id")
 
     reason = models.CharField(
         max_length=20,
@@ -39,3 +40,10 @@ class Report(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user", "content_type", "object_id"],
+                name="unique_user_content_report",
+            )
+        ]
