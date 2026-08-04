@@ -19,7 +19,7 @@ import { useLogin } from "./useLogin";
 
 type Mode = "login" | "register";
 
-export function LoginForm() {
+export default function LoginForm() {
   const [mode, setMode] = useState<Mode>("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
